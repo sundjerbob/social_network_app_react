@@ -1,0 +1,17 @@
+#root {
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+header{
+  margin-top: 6%  ;
+  align-content: center;
+  padding: 10px;
+  color: #ecedf2;
+}
+footer {
+
+  width: 100%;
+  text-align: center; /* Horizontally center the content */
+  padding: 10px 0; /* Padding top and bottom for content */
+}

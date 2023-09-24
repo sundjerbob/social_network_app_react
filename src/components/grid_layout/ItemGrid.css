@@ -1,0 +1,24 @@
+/* ItemGrid.css */
+.item-grid {
+    /* Use CSS Grid for layout */
+    display: grid;
+
+    /* Create 3 equally sized columns */
+    grid-template-columns: repeat(3, 1fr);
+
+    grid-auto-rows: auto; /* Auto height based on content */
+
+    /* Set the gap between items as a percentage of the viewport width */
+
+    grid-gap: 5rem; /* Increase the gap to add more space between items */
+
+    /* Align items to the end of the grid (right-align) */
+    justify-content: flex-end;
+
+    /* Allow items to wrap to the next row when the current row is filled */
+    flex-wrap: wrap;
+
+    margin-bottom: 7%;
+    margin-top: 3%;
+    padding-left: 20%;
+}
