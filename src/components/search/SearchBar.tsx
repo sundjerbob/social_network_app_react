@@ -1,38 +1,17 @@
-import React, { useEffect, useState } from 'react';
-import './SearchBar.css';
+import React from "react";
+import "./SearchBar.css";
 
-const SearchBar: React.FC = () => {
-    const [isScrolled, setIsScrolled] = useState(false);
+interface SearchBarProps {
+    isScrolled: boolean; // Prop to indicate scroll state
+}
 
-    useEffect(() => {
-        const handleScroll = () => {
-            // Determine if the user has scrolled down a certain distance (e.g., 100 pixels)
-            const scrollY = window.scrollY;
-            const scrollThreshold = 100;
-
-            if (scrollY > scrollThreshold) {
-                // User has scrolled down, apply styles for animation
-                setIsScrolled(true);
-            } else {
-                // User is at the top, reset styles
-                setIsScrolled(false);
-            }
-        };
-
-        window.addEventListener('scroll', handleScroll);
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
-
+const SearchBar: React.FC<SearchBarProps> = ({ isScrolled }) => {
     return (
-        <div
-            className={`search-bar ${isScrolled ? 'scrolled' : ''}`}
-        >
+        <div className={`search-bar ${isScrolled ? "scrolled" : ""}`}>
             <input type="text" placeholder="Search..." />
-            <button type="submit" className="search-button">Search</button>
-            {/* Add the "search-button" class to the button */}
+            <button type="submit" className="search-button">
+                Search
+            </button>
         </div>
     );
 };

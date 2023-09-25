@@ -4,28 +4,34 @@
 /* SearchBar.css */
 
 /* Style the search bar container */
+/* SearchBar.css */
+
+/* Style the search bar container */
 .search-bar {
     margin-top: 2%;
+    z-index: 999;
     position: fixed;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+    width: 35vw;
     display: flex;
     align-items: center;
     background-color: #f5f5f5;
     border-radius: 20px;
     padding: 12px 20px;
-    width: 50vw;
+
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: top 0.4s, width 0.4s; /* Add transitions for smooth animation */
+    transition: left 0.25s ease-out, width 0.25s ease-out; /* Add transitions for smooth animation */
 }
 
 /* Add styles for the scrolled state */
 .search-bar.scrolled {
-    left: 15%;
-    width: 20%; /* Reduce width as needed */
+    left: 12%; /* Adjust left position for the scrolled state */
+    width:  18vw; /* Reduce width to half when scrolled */
     z-index: 999;
 }
+
 
 /* Style the search input field */
 .search-bar input[type="text"] {
