@@ -8,10 +8,9 @@
 
 /* Style the search bar container */
 .search-bar {
-    margin-top: 2%;
     z-index: 999;
     position: fixed;
-    top: 0;
+    top: 4vh;
     left: 50%;
     transform: translateX(-50%);
     width: 35vw;

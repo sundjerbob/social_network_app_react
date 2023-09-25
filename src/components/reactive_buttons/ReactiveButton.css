@@ -4,7 +4,7 @@
 .menu-item {
     position: fixed;
     width: 10rem;
-    top: 10px;
+    top: 4vh;
     right: 10px;
     display: flex;
     align-items: center;
