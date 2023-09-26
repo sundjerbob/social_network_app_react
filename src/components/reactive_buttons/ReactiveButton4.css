@@ -1,0 +1,14 @@
+/* ReactiveButton3.css */
+
+/* default state */
+.item4 {
+    top: 4vh;
+    left: 2%;
+    transition: top 0.3s ease; /* Add a smooth transition for the top property */
+}
+
+/* scrolled state */
+.item4.scrolled {
+    width:  18vw;
+    top: 25rem; /* Move to the middle of the screen vertically */
+}

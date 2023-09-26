@@ -10,8 +10,16 @@ header {
   padding: 10px;
   color: #ecedf2;
 }
-footer {
 
+#pederskoSrce{
+  background-color: #242424;
+  position: absolute;
+  top: 11.28rem;
+  left: 61%;
+  width: 90px;
+  height: 90px;
+}
+footer {
   width: 100%;
   text-align: center; /* Horizontally center the content */
   padding: 10px 0; /* Padding top and bottom for content */

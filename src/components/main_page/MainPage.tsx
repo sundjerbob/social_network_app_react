@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
 import ItemGrid from "../grid_layout/ItemGrid";
 import SearchBar from "../search/SearchBar";
-import ReactiveButton from "../reactive_buttons/ReactiveButton"; // Import the MenuItem component
+import ReactiveButton1 from "../reactive_buttons/ReactiveButton1"; // Import the MenuItem component
+import ReactiveButton2 from "../reactive_buttons/ReactiveButton2";
+import ReactiveButton3 from "../reactive_buttons/ReactiveButton3";
+import ReactiveButton4 from "../reactive_buttons/ReactiveButton4";
 
 interface MainPageProps {
     // Define props here
@@ -37,6 +40,11 @@ const MainPage: React.FC<MainPageProps> = () => {
         <div className="main-page">
             <div className="content">
                 {/* Pass the isScrolled state as a prop */}
+                <ReactiveButton1 icon="" text="Belo kes i" isScrolled={isScrolled} />
+                <ReactiveButton2 icon="" text="I Luksuz" isScrolled={isScrolled} />
+                <ReactiveButton3 icon="" text="STa ti treba" isScrolled={isScrolled} />
+                <ReactiveButton4 icon="" text="Kaazi  " isScrolled={isScrolled} />
+
                 <SearchBar isScrolled={isScrolled} />
                 <main>
                     <ItemGrid />
@@ -44,7 +52,6 @@ const MainPage: React.FC<MainPageProps> = () => {
                 </main>
             </div>
             {/* Add the MenuItem component and pass isScrolled as a prop */}
-            <ReactiveButton icon="icon.png" text="Menu Item" isScrolled={isScrolled} />
         </div>
     );
 };

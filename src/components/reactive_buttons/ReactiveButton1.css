@@ -1,0 +1,16 @@
+/* ReactiveButton1.css */
+
+/* default state */
+.item1 {
+    top: 4vh;
+    right: 10px;
+    background-color: #747bff;
+
+}
+
+/* scrolled state */
+.item1.scrolled {
+    left: 2%;
+    width: 18vw;
+    top: 10rem;
+}
