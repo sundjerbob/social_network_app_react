@@ -11,8 +11,10 @@ function App() {
     <div className="App">
 
      <header>
-         <img id="pederskoSrce" src={pederskoSrce}   alt=''/>
-         <h1>Pronadji si Lezbu</h1>
+         <div id="title">
+            <img id="pederskoSrce" src={pederskoSrce}   alt=''/>
+             <h1 >Pronadji si Lezbu</h1>
+        </div>
      </header>
 
      <main>

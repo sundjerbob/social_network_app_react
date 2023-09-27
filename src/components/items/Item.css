@@ -3,7 +3,7 @@
 .rectangle-item {
     /* Set the width and height of the item */
     width: 30rem; /* Adjust as needed */
-    height: 40rem; /* Adjust as needed */
+    height: 30rem; /* Adjust as needed */
     border-radius: 10px; /* Rounded corners */
     position: relative; /* Make the item a positioned container */
     overflow: hidden; /* Hide the inner shadows overflow */
@@ -24,9 +24,19 @@
 }
 
 .rectangle-item img {
+        transition: transform 0.3s; /* Add a transition for smooth animation */
     /* Style for the image in the middle */
     max-height: 60%; /* Adjust image height as needed */
     border-radius: 10px 10px 0 0; /* Rounded top corners */
+    width: 100%;
+}
+
+.rectangle-item img {
+
+}
+
+.rectangle-item:hover img {
+    transform: scale(1.2); /* Increase the scale to zoom in (adjust as needed) */
 }
 
 .icons {

@@ -3,7 +3,13 @@ import React from 'react';
 import './ItemGrid.css';
 import Item from '../items/Item';
 import cacaj from '../../assets/CACAJ.jpg'
-const ItemGrid: React.FC = () => {
+
+interface  ItemGridProps {
+    isScrolled: boolean;
+}
+
+const ItemGrid: React.FC<ItemGridProps> = ({ isScrolled }) => {
+
     // Define the common image URL
     const commonImageSrc =  cacaj;// Replace with the actual common image URL
 
@@ -15,8 +21,9 @@ const ItemGrid: React.FC = () => {
         icons: [`icon${index + 1}_1`, `icon${index + 1}_2`, `icon${index + 1}_3`],
     }));
 
+    let scrolledState = isScrolled? ' scrolled ' : '';
     return (
-        <div className="item-grid">
+        <div className={"item-grid" + scrolledState}>
             {gridData.map((itemData) => (
                 <Item
                     key={itemData.id}

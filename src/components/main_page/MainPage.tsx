@@ -5,6 +5,7 @@ import ReactiveButton1 from "../reactive_buttons/ReactiveButton1"; // Import the
 import ReactiveButton2 from "../reactive_buttons/ReactiveButton2";
 import ReactiveButton3 from "../reactive_buttons/ReactiveButton3";
 import ReactiveButton4 from "../reactive_buttons/ReactiveButton4";
+import LandingInfo from "../landing_info/LandingInfo";
 
 interface MainPageProps {
     // Define props here
@@ -39,6 +40,7 @@ const MainPage: React.FC<MainPageProps> = () => {
     return (
         <div className="main-page">
             <div className="content">
+
                 {/* Pass the isScrolled state as a prop */}
                 <ReactiveButton1 icon="" text="Belo kes i" isScrolled={isScrolled} />
                 <ReactiveButton2 icon="" text="I Luksuz" isScrolled={isScrolled} />
@@ -46,8 +48,10 @@ const MainPage: React.FC<MainPageProps> = () => {
                 <ReactiveButton4 icon="" text="Kaazi  " isScrolled={isScrolled} />
 
                 <SearchBar isScrolled={isScrolled} />
+
+                <LandingInfo isScrolled={isScrolled}/>
                 <main>
-                    <ItemGrid />
+                    <ItemGrid isScrolled={isScrolled}/>
                     {/* Add other content here */}
                 </main>
             </div>

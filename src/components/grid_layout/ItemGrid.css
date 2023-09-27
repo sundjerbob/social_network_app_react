@@ -4,12 +4,11 @@
     display: grid;
 
     /* Create 3 equally sized columns */
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 
     grid-auto-rows: auto; /* Auto height based on content */
 
     /* Set the gap between items as a percentage of the viewport width */
-
     grid-gap: 5rem; /* Increase the gap to add more space between items */
 
     /* Align items to the end of the grid (right-align) */
@@ -19,6 +18,13 @@
     flex-wrap: wrap;
 
     margin-bottom: 10%;
-    margin-top: 3%;
+    margin-top: 20%;
     padding-left: 18%;
+    transition: background-color 0.3s ease-out, left 0.3s ease-out, width 0.3s ease-out, top 0.3s ease, margin-left 0.3s ease; /* Add transitions for background color, left position, width, top position, and margin-left */
+
+}
+
+/* Add the slide-in animation for the .scrolled class */
+.item-grid.scrolled {
+    margin-left: 10%;
 }

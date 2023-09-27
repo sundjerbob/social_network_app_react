@@ -13,6 +13,8 @@
     transition: background-color 0.3s ease-out, left 0.3s ease-out, width 0.3s ease-out, top 0.3s ease; /* Add transitions for background color, left position, and width */
     z-index: 998;
     justify-content: center;
+    background-clip:unset;
+
 }
 
 .menu-item:hover{

@@ -4,7 +4,6 @@
 .item4 {
     top: 4vh;
     left: 2%;
-    transition: top 0.3s ease; /* Add a smooth transition for the top property */
 }
 
 /* scrolled state */

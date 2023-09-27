@@ -7,7 +7,7 @@ interface SearchBarProps {
 
 const SearchBar: React.FC<SearchBarProps> = ({ isScrolled }) => {
     return (
-        <div className={`search-bar ${isScrolled ? "scrolled" : ""}`}>
+        <div className={`search-bar ' ${isScrolled ? 'scrolled' : ''}`}>
             <input type="text" placeholder="Search..." />
             <button type="submit" className="search-button">
                 Search
