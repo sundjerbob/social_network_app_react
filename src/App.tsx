@@ -9,8 +9,8 @@ function App() {
 
   return (
     <div className="App">
-
-     <header>
+        <div className="background"/>
+        <header>
          <div id="title">
             <img id="pederskoSrce" src={pederskoSrce}   alt=''/>
              <h1 >Pronadji si Lezbu</h1>

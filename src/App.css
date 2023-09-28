@@ -38,3 +38,18 @@ footer {
   text-align: center; /* Horizontally center the content */
   padding: 10px 0; /* Padding top and bottom for content */
 }
+
+.background {
+  position: absolute;
+  overflow-block: auto;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  aspect-ratio: 900/300;
+  width:calc( 100vw - 17px);
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url('./assets/layered-waves.svg')
+}

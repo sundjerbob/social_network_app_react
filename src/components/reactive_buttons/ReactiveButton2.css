@@ -2,13 +2,12 @@
 
 /* default state */
 .item2 {
-    top: 4vh;
-    right: 20rem;
+    left: 70%;
 }
 
 /* scrolled state */
 .item2.scrolled {
     left: 2%;
     width:  18vw;
-    top: 15rem;
+    top: 25rem;
 }

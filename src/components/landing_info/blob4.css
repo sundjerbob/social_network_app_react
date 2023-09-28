@@ -1,0 +1,43 @@
+
+
+/* blob4.css */
+
+.blob-4
+{
+    top: 30vh;
+    left: 40%;
+    position: fixed;
+    height: 20rem;
+    width: 20rem;
+    z-index: -1;
+    box-shadow: 0 0 20rem rgb(118, 41, 127),
+    0 0 20rem rgb(234, 87, 234),
+    0 0 20rem rgba(200, 54, 217, 0.98),
+    0 0 20rem rgb(215, 44, 193,50%);
+    background: linear-gradient(to bottom, #9625a4, #7d51b4); /* Gradient background */
+    transform: skewY(-10deg); /* Skew the element vertically */
+    filter: blur(120px);
+    border-radius: 100rem;
+    transition: background-color 0.3s ease-out,
+    left 0.3s ease-out,
+    width 0.3s ease-out,
+    height 0.3s ease-out,
+    top 0.3s ease; /* Add transitions for */
+}
+
+
+.blob-4::before {
+    content: "";
+    position: absolute;
+    top: -10px; /* Adjust the top position to control the slant */
+    left: 0;
+    width: 100%;
+    height: 10px; /* Adjust the height to control the slant degree */
+    transform: skewY(-10deg); /* Skew the pseudo-element vertically */
+}
+
+.blob-4.scrolled {
+    /*filter: blur(150px);*/
+    top: 80vh;
+    left: 5%;
+}

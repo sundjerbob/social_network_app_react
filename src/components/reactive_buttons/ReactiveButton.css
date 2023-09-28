@@ -6,7 +6,7 @@
     width: 10rem;
     display: flex;
     align-items: center;
-    background: linear-gradient(to bottom, #333  , #0000); /* Gradient background */
+    background: linear-gradient(to bottom, #333  , #0005); /* Gradient background */
     border-radius: 20px; /* Rounded corners */
     padding: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -15,6 +15,12 @@
     justify-content: center;
     background-clip:unset;
 
+    top: 5vh;
+}
+
+.menu-item.scrolled {
+    width:  18vw;
+    left: 2%;
 }
 
 .menu-item:hover{

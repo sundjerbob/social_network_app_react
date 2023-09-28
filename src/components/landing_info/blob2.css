@@ -1,0 +1,33 @@
+/* blob2.css */
+.blob-2
+{
+    top: 15vh;
+    left: 60%;
+    position: fixed;
+    height: 20rem;
+    width: 50vw;
+    z-index: -1;
+    box-shadow: 0 0 20rem rgb(36, 36, 36),
+    0 0 20rem rgb(64, 124, 215),
+    0 0 20rem rgb(114, 163, 237),
+    0 0 20rem rgb(118, 169, 255);
+    background: linear-gradient(to bottom, #6a8dbb, #0003 ); /* Gradient background */
+    transition: background-color 0.3s ease-out,
+    left 0.3s ease-out,
+    width 0.3s ease-out,
+    height 0.3s ease-out,
+    bottom 0.3s ease; /* Add transitions for background color, left position, and width */
+    filter: blur(120px);
+    border-radius: 100rem;
+    transform: skewY(-45deg); /* Skew the pseudo-element vertically */
+
+}
+
+
+.blob-2.scrolled {
+    top: 50vh;
+    left: 30%;
+    height: 40rem;
+    width: 60vw;
+    /*filter: blur(200px);*/
+}

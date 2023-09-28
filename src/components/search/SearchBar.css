@@ -14,7 +14,7 @@
     border-radius: 20px;
     padding: 12px 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: left 0.25s ease-out, width 0.25s ease-out; /* Add transitions for smooth animation */
+    transition: left 0.3s ease-out, width 0.3s ease-out; /* Add transitions for smooth animation */
 }
 
 /* Add styles for the scrolled state */

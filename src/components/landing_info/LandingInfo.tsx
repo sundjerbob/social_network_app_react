@@ -1,16 +1,23 @@
 // LandingInfo.txt
 
 import React from "react";
-import './LandingInfo.css'
-
+import './blob1.css'
+import './blob2.css'
+import './blob3.css'
+import './blob4.css'
 interface LandingInfoProps {
     isScrolled: boolean;
 }
 
 const LandingInfo: React.FC<LandingInfoProps> = ({ isScrolled }) => {
     return(
-        <div className={`landing-info ${isScrolled ? ' scrolled ' : ''}`}>
-        </div>
+        <>
+            <div className={`blob-1 ${isScrolled ? ' scrolled ' : ''}`}/>
+            <div className={`blob-2 ${isScrolled ? ' scrolled ' : ''}`}/>
+            <div className={`blob-3 ${isScrolled ? ' scrolled ' : ''}`}/>
+            <div className={`blob-4 ${isScrolled ? ' scrolled ' : ''}`}/>
+        </>
+
     );
 };
 
