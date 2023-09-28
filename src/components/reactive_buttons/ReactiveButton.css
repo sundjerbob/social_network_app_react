@@ -3,7 +3,7 @@
 /* Style the menu item container */
 .menu-item {
     position: fixed;
-    width: 10rem;
+    width: 8vw;
     display: flex;
     align-items: center;
     background: linear-gradient(to bottom, #333  , #0005); /* Gradient background */
@@ -20,7 +20,7 @@
 
 .menu-item.scrolled {
     width:  18vw;
-    left: 2%;
+    left: 5vw;
 }
 
 .menu-item:hover{

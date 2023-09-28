@@ -2,14 +2,13 @@
 
 /* default state */
 .item1 {
-    left: 85%;
-    background-color: #747bff;
+    left: 8vw;
+   /* background-color: #747bff;*/
 
 }
 
 /* scrolled state */
 .item1.scrolled {
-    left: 2%;
     width: 18vw;
     top: 10rem;
 }

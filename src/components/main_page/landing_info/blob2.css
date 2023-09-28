@@ -2,22 +2,22 @@
 .blob-2
 {
     top: 15vh;
-    left: 60%;
+    left: 80%;
     position: fixed;
-    height: 20rem;
-    width: 50vw;
+    height: 10vh;
+    width: 20vw;
     z-index: -1;
-    box-shadow: 0 0 20rem rgb(36, 36, 36),
+    box-shadow: 0 0 20rem rgb(41, 91, 177),
     0 0 20rem rgb(64, 124, 215),
     0 0 20rem rgb(114, 163, 237),
     0 0 20rem rgb(118, 169, 255);
-    background: linear-gradient(to bottom, #6a8dbb, #0003 ); /* Gradient background */
+    background: linear-gradient(to bottom, #6a8dbb, #295BB1F2 ); /* Gradient background */
     transition: background-color 0.3s ease-out,
     left 0.3s ease-out,
     width 0.3s ease-out,
     height 0.3s ease-out,
     bottom 0.3s ease; /* Add transitions for background color, left position, and width */
-    filter: blur(120px);
+    filter: blur(250px);
     border-radius: 100rem;
     transform: skewY(-45deg); /* Skew the pseudo-element vertically */
 
@@ -26,8 +26,8 @@
 
 .blob-2.scrolled {
     top: 50vh;
-    left: 30%;
-    height: 40rem;
-    width: 60vw;
+    left: 60%;
+    height: 20vh;
+    width: 30vw;
     /*filter: blur(200px);*/
 }

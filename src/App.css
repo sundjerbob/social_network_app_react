@@ -22,17 +22,7 @@ header {
   transform: translateX(-50%);
 }
 
-#pederskoSrce{
-  position: fixed;
-  top: 0;
-  left: 105%;
-  transform: translateX(-50%);
-  width: 150px;
-  height: 150px;
-  z-index: -2;
-  border-radius: 20rem;
-  filter: blur(4px);
-}
+
 footer {
   width: 100%;
   text-align: center; /* Horizontally center the content */
@@ -40,16 +30,16 @@ footer {
 }
 
 .background {
-  position: absolute;
+  position: fixed;
   overflow-block: auto;
   top: 0;
   left: 0;
   z-index: -1;
   aspect-ratio: 900/300;
-  width:calc( 100vw - 17px);
+  width:calc( 100vw);
   height: 100vh;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-image: url('./assets/layered-waves.svg')
+  background-image: url('./assets/backg2-horisontal.svg')
 }

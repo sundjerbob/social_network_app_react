@@ -2,7 +2,6 @@ import { useState } from 'react'
 import './components/main_page/MainPage'
 import './App.css'
 import MainPage from './components/main_page/MainPage';
-import pederskoSrce from './assets/pride_heart.jpg'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,7 +11,6 @@ function App() {
         <div className="background"/>
         <header>
          <div id="title">
-            <img id="pederskoSrce" src={pederskoSrce}   alt=''/>
              <h1 >Pronadji si Lezbu</h1>
         </div>
      </header>

@@ -17,13 +17,6 @@
 
 
 
-/*body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}*/
 
 
 button {
@@ -40,8 +33,8 @@ button {
 
 button:focus,
 button:focus-visible {
-  outline: 1px auto -webkit-focus-ring-color;
-}
+  /*outline: 1px auto -webkit-focus-ring-color;
+*/}
 
 
 

@@ -3,7 +3,7 @@
 .blob-1
 {
     top: 10vh;
-    left: 0;
+    left: 40vw;
     position: fixed;
     height: 100rem;
     width: 100vw;
@@ -14,7 +14,7 @@
     0 0 20rem rgb(36, 36, 36);
     background: linear-gradient(to bottom, #333  , black); /* Gradient background */
     transform: skewY(-10deg); /* Skew the element vertically */
-    filter: blur(100px);
+    filter: blur(150px);
     border-radius: 100rem;
 }
 

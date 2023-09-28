@@ -16,7 +16,7 @@
     0 0 20rem rgb(215, 44, 193,50%);
     background: linear-gradient(to bottom, #9625a4, #7d51b4); /* Gradient background */
     transform: skewY(-10deg); /* Skew the element vertically */
-    filter: blur(120px);
+    filter: blur(200px);
     border-radius: 100rem;
     transition: background-color 0.3s ease-out,
     left 0.3s ease-out,

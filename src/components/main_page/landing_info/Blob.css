@@ -1,0 +1,15 @@
+.pink {
+    background: #ff0066;
+    overflow: hidden;
+}
+
+.blob-motion {
+    position: absolute;
+    transform: translateY(-20%);
+    z-index: 0;
+}
+
+.blob-content {
+    z-index: 1;
+}
+

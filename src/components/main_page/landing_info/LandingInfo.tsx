@@ -12,6 +12,7 @@ interface LandingInfoProps {
 const LandingInfo: React.FC<LandingInfoProps> = ({ isScrolled }) => {
     return(
         <>
+
             <div className={`blob-1 ${isScrolled ? ' scrolled ' : ''}`}/>
             <div className={`blob-2 ${isScrolled ? ' scrolled ' : ''}`}/>
             <div className={`blob-3 ${isScrolled ? ' scrolled ' : ''}`}/>

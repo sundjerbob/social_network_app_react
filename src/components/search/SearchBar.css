@@ -5,8 +5,7 @@
     z-index: 999;
     position: fixed;
     top: 4vh;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 55vw;
     width: 35vw;
     display: flex;
     align-items: center;
@@ -19,7 +18,7 @@
 
 /* Add styles for the scrolled state */
 .search-bar.scrolled {
-    left: 12%; /* Adjust left position for the scrolled state */
+    left:  5vw; /* Adjust left position for the scrolled state */
     width: 17vw; /* Reduce width to half when scrolled */
     z-index: 999;
 }
