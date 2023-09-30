@@ -8,6 +8,7 @@
     position: relative; /* Make the item a positioned container */
     overflow: hidden; /* Hide the inner shadows overflow */
     transition: box-shadow 0.3s ease-in-out; /* Add transition for hover effect */
+    z-index: 999;
 }
 
 

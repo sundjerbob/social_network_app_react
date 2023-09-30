@@ -11,7 +11,7 @@
     padding: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease-out, left 0.3s ease-out, width 0.3s ease-out, top 0.3s ease; /* Add transitions for background color, left position, and width */
-    z-index: 998;
+    z-index: 999;
     justify-content: center;
     background-clip:unset;
 

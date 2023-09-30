@@ -1,0 +1,71 @@
+
+.morphing-blob-1 {
+    position: fixed;
+    top: -5vh;
+    left: 60%;
+    z-index: -2;
+    animation: floating1 10s infinite linear alternate;
+}
+
+.morphing-blob-2 {
+    position: fixed;
+    top: -5vh;
+    left: 88%;
+    animation: floating2 10s infinite linear alternate;
+    z-index: -2;
+
+}
+
+.morphing-blob-3 {
+    position: fixed;
+    top: -5vh;
+    left: 24%;
+    z-index: -2;
+    animation: floating1 10s infinite linear alternate;
+}
+
+@keyframes floating1 {
+    0% {
+        scale: 0.5;
+    }
+
+    100% {
+        transform: translate(0, 105vh);
+        scale: 0.55;
+
+    }
+}
+
+
+
+@keyframes floating2 {
+    0% {
+        scale: 0.5;
+
+    }
+
+
+    100% {
+        transform: translate(0, 1500px);
+        scale: 0.6;
+    }
+}
+
+#blob1, #blob3, #blob5 {
+    animation: color-change 10s infinite linear alternate;
+
+}
+
+@keyframes color-change {
+    0% {
+        fill: #FA7268;
+
+    }
+    50% {
+        fill: #C62368;
+    }
+
+    100% {
+        fill: #FA7268;
+    }
+}

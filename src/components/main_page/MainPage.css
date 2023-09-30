@@ -1,5 +1,64 @@
 /* MainPage.css */
 
 
+#title h1{
+    left: 50%;
+    transform: translateX(-50%);
+    position: fixed;
+    z-index: 999;
+}
 
+#up {
+    position: fixed;
+    overflow-block: auto;
+    top: 0;
+    left: -200vw;
+    width: 300%;
+    height: 100%;
+    display: flex;
+    background-size: cover;
+    background-position: top;
+    background-image: url('../../assets/TOP_VAVES.svg');
+    animation: slide1 50s ease-in-out infinite  alternate;
+    z-index: -1;
+}
+
+
+#down {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300%;
+    height: 100%;
+    display: flex;
+    background-size: cover;
+    background-position: bottom;
+    background-image: url('../../assets/BOTTOM_WAWES.svg');
+    animation: slide2 45s ease-in-out infinite  alternate;
+    z-index: -1;
+
+}
+
+
+
+@keyframes slide1 {
+    0%{
+        transform: translate(0%,0%);
+    }
+
+    100%{
+        transform: translate(200vw,0);
+    }
+}
+
+@keyframes slide2 {
+    0%{
+        transform: translate(0%,0%);
+    }
+
+    100%{
+        transform: translate(-200vw,0);
+    }
+}
 

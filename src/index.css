@@ -2,8 +2,10 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  letter-spacing: 1px;
 
   color-scheme: light ;
+
   color: rgba(255, 255, 255, 0.87);
 
   background-color: #242424;
@@ -15,7 +17,9 @@
   -webkit-text-size-adjust: 100%;
 }
 
-
+html {
+  scroll-behavior: smooth;
+}
 
 
 
@@ -36,5 +40,7 @@ button:focus-visible {
   /*outline: 1px auto -webkit-focus-ring-color;
 */}
 
-
+h1, h2, h3, h4, h5, p, a, span {
+  z-index: 999;
+}
 

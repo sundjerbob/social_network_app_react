@@ -18,10 +18,9 @@
     flex-wrap: wrap;
 
     margin-bottom: 10%;
-    margin-top: 5%;
+    margin-top: 30%;
     padding-left: 18%;
     transition: background-color 0.3s ease-out, left 0.3s ease-out, width 0.3s ease-out, top 0.3s ease, margin-left 0.3s ease; /* Add transitions for background color, left position, width, top position, and margin-left */
-
 }
 
 /* Add the slide-in animation for the .scrolled class */

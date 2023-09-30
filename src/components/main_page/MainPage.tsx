@@ -7,7 +7,7 @@ import ReactiveButton1 from "../reactive_buttons/ReactiveButton1";
 import ReactiveButton2 from "../reactive_buttons/ReactiveButton2";
 import ReactiveButton3 from "../reactive_buttons/ReactiveButton3";
 import ReactiveButton4 from "../reactive_buttons/ReactiveButton4";
-import BlobSVG from "./landing_info/Blob";
+import BlobSVG from "./blob_animation/LavaLamp";
 import "./MainPage.css";
 
 interface MainPageProps {
@@ -37,17 +37,37 @@ const MainPage: React.FC<MainPageProps> = () => {
     }, []);
 
     return (
+
         <div>
-            <ReactiveButton1 icon="" text="Belo kes i" isScrolled={isScrolled} />
-            <ReactiveButton2 icon="" text="I Luksuz" isScrolled={isScrolled} />
-            <ReactiveButton3 icon="" text="STa ti treba" isScrolled={isScrolled} />
-            <ReactiveButton4 icon="" text="Kaazi  " isScrolled={isScrolled} />
-            <SearchBar isScrolled={isScrolled} />
+            <header>
+                    <div id="title">
+                    <h1>DROLJE</h1>
+                </div>
+            </header>
 
-            <ItemGrid isScrolled={isScrolled} />
+            <main>
 
-            {/* Render the PinkBlobSection component */}
-            <BlobSVG />
+
+                <div id="up"/>
+                <div id="down" >
+                </div>
+
+                <ReactiveButton1 icon="" text="Belo kes i" isScrolled={isScrolled} />
+                <ReactiveButton2 icon="" text="I Luksuz" isScrolled={isScrolled} />
+                <ReactiveButton3 icon="" text="STa ti treba" isScrolled={isScrolled} />
+                <ReactiveButton4 icon="" text="Kaazi  " isScrolled={isScrolled} />
+                <SearchBar isScrolled={isScrolled} />
+
+                <ItemGrid isScrolled={isScrolled} />
+
+                {/* Render the PinkBlobSection component */}
+                <BlobSVG />
+            </main>
+
+            <footer>
+                <p>&copy; 2023 Ogicrni LLC</p>
+                <p>Contact us: <a href="mailto:contact@example.com">contact@example.com</a></p>
+            </footer>
         </div>
     );
 };
