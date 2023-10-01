@@ -14,8 +14,7 @@ const LavaLamp: React.FC = () => {
         script.onload = () => {
 
             for (let i = 1; i <= 6; i += 2) {
-                let animationDuration = Math.random() * 3000 + 500;
-                console.log(animationDuration);
+                let animationDuration = Math.random() * 2000 + 1500;
                 KUTE.fromTo(
                     '#blob' + i,
                     {path: '#blob' + i},
@@ -30,15 +29,23 @@ const LavaLamp: React.FC = () => {
 
 
         const blobs = document.querySelectorAll('#blobs div');
+        console.log( 'HOW MANY BLOBS  : ' + blobs.length)
 
         blobs.forEach(blob => {
             const blobElement = blob as HTMLElement; // Cast to HTMLElement
-            blobElement.addEventListener('animationiteration', event => {
-                blobElement.style.left = Math.round(Math.random() * 100) + '%';
-                blobElement.style.transform = 'scale(' + Math.random() * 0.6 + 0.4 + ')';
+            //let delay = Math.random() * 5
+            //blobElement.style.animationDelay =  delay + 's';
 
+
+            blobElement.addEventListener('animationiteration', event => {
+                // Check if the elapsed time is over 9.9 seconds (assuming your animation duration is 10s)
+                if (event.elapsedTime % 10 === 0)  {
+                    blobElement.style.left = Math.round(Math.random() * 100) + '%';
+                    //blobElement.style.transform = 'scale(' + Math.random() * 0.6 + 0.4 + ')';
+
+                }
             });
-            let scale = Math.random();
+
         });
 
         // Cleanup the script element when the component unmounts
@@ -110,7 +117,7 @@ const LavaLamp: React.FC = () => {
 
             </div>
 
-            <div className="morphing-blob-2">
+            <div className="morphing-blob-3">
                 <svg id="visual"
                      viewBox="0 0 900 600"
                      width="900"
