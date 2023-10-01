@@ -9,7 +9,7 @@ interface ItemProps {
 
 const Item: React.FC<ItemProps> = ({ label, imageSrc, icons }) => {
     return (
-        <div className="rectangle-item">
+        <div className="rectangle-item" >
             <img src={imageSrc} alt={label} /> {/* Image in the middle */}
             <h4>{label}</h4> {/* Heading label at the top */}
 

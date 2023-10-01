@@ -6,7 +6,7 @@
     left: 50%; /* Adjust as needed */
     transform: translateX(-50%); /* Center horizontally */
     z-index: -2;
-    animation: floating1 10s infinite linear alternate;
+    animation: floating1 infinite linear alternate;
 }
 
 .morphing-blob-2 {
@@ -15,7 +15,7 @@
     left: 88%;
     transform: translateX(-50%); /* Center horizontally */
     z-index: -2;
-    animation: floating2 10s infinite linear alternate;
+    animation: floating2 infinite linear alternate;
 }
 
 .morphing-blob-3 {
@@ -24,7 +24,7 @@
     left: 24%;
     transform: translateX(-50%); /* Center horizontally */
     z-index: -2;
-    animation: floating1 10s infinite linear alternate;
+    animation: floating1 infinite linear alternate;
 }
 
 @keyframes floating1 {

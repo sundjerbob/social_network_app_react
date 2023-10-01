@@ -55,4 +55,9 @@
     color: #fff2ee; /* Icon color */
 }
 
-
+.rectangle-item video {
+    top: 50%;
+    left: 50%;
+    z-index: 999;
+    position: absolute;
+}

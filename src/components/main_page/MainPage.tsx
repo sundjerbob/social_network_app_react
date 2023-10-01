@@ -1,6 +1,6 @@
 // MainPage.tsx
 
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 import ItemGrid from "../grid_layout/ItemGrid";
 import SearchBar from "../search/SearchBar";
 import ReactiveButton1 from "../reactive_buttons/ReactiveButton1";
@@ -40,7 +40,7 @@ const MainPage: React.FC<MainPageProps> = () => {
 
         <div>
             <header>
-                    <div id="title">
+                <div id="title">
                     <h1>DROLJE</h1>
                 </div>
             </header>
@@ -48,20 +48,23 @@ const MainPage: React.FC<MainPageProps> = () => {
             <main>
 
 
-                <div id="up"/>
-                <div id="down" >
+                <div id="up">
+
                 </div>
 
-                <ReactiveButton1 icon="" text="Belo kes i" isScrolled={isScrolled} />
-                <ReactiveButton2 icon="" text="I Luksuz" isScrolled={isScrolled} />
-                <ReactiveButton3 icon="" text="STa ti treba" isScrolled={isScrolled} />
-                <ReactiveButton4 icon="" text="Kaazi  " isScrolled={isScrolled} />
-                <SearchBar isScrolled={isScrolled} />
+                <div id="down">
+                </div>
 
-                <ItemGrid isScrolled={isScrolled} />
+                <ReactiveButton1 icon="" text="Belo kes i" isScrolled={isScrolled}/>
+                <ReactiveButton2 icon="" text="I Luksuz" isScrolled={isScrolled}/>
+                <ReactiveButton3 icon="" text="STa ti treba" isScrolled={isScrolled}/>
+                <ReactiveButton4 icon="" text="Kaazi  " isScrolled={isScrolled}/>
+                <SearchBar isScrolled={isScrolled}/>
+
+                <ItemGrid isScrolled={isScrolled}/>
 
                 {/* Render the PinkBlobSection component */}
-                <BlobSVG />
+                <BlobSVG/>
             </main>
 
             <footer>

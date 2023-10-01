@@ -5,6 +5,7 @@ import './LavaLamp.css'
 
 const LavaLamp: React.FC = () => {
 
+
     useEffect(() => {
 
         // Load the KUTE library dynamically
@@ -13,12 +14,12 @@ const LavaLamp: React.FC = () => {
         script.async = true;
         script.onload = () => {
 
-            for (let i = 1; i <= 6; i += 2) {
+            for (let i = 1; i <= 6; ++i) {
                 let animationDuration = Math.random() * 2000 + 1500;
                 KUTE.fromTo(
                     '#blob' + i,
                     {path: '#blob' + i},
-                    {path: '#blob' + (i + 1)},
+                    {path: '#blob' + ++i},
                     {repeat: 999, duration: animationDuration, yoyo: true}
                 ).start();
             }
@@ -29,18 +30,22 @@ const LavaLamp: React.FC = () => {
 
 
         const blobs = document.querySelectorAll('#blobs div');
-        console.log( 'HOW MANY BLOBS  : ' + blobs.length)
+        console.log('HOW MANY BLOBS  : ' + blobs.length)
 
         blobs.forEach(blob => {
             const blobElement = blob as HTMLElement; // Cast to HTMLElement
-            //let delay = Math.random() * 5
-            //blobElement.style.animationDelay =  delay + 's';
-
+            let delay: number = Math.random() * 7
+            let duration: number = Math.random() * 8 + 8;
+            blobElement.style.animationDelay = delay + 's';
+            blobElement.style.animationDuration = duration + 's';
 
             blobElement.addEventListener('animationiteration', event => {
-                // Check if the elapsed time is over 9.9 seconds (assuming your animation duration is 10s)
-                if (event.elapsedTime % 10 === 0)  {
-                    blobElement.style.left = Math.round(Math.random() * 100) + '%';
+                const animationDelay = parseFloat(getComputedStyle(blobElement).animationDelay) || 0;
+                const animationDuration = parseFloat(getComputedStyle(blobElement).animationDuration) || 0;
+                    console.log(event.animationName)
+                if ( event.animationName === 'floating2' || event.animationName === 'floating1') {
+                    console.log('elapsed : ' + event.elapsedTime + ' duration: ' + animationDuration + ' delay :' + animationDelay)
+                    blobElement.style.left = Math.random() * 100 + '%';
                     //blobElement.style.transform = 'scale(' + Math.random() * 0.6 + 0.4 + ')';
 
                 }
