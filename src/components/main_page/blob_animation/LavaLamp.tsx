@@ -8,13 +8,37 @@ const LavaLamp: React.FC = () => {
 
     useEffect(() => {
 
-        // Load the KUTE library dynamically
-        const script = document.createElement('script');
-        script.src = 'https://cdn.jsdelivr.net/npm/kute.js@2.1.0/dist/kute.min.js';
-        script.async = true;
-        script.onload = () => {
 
-            for (let i = 1; i <= 6; ++i) {
+
+        const blobs = document.querySelectorAll('#blobs div');
+
+        blobs.forEach(blob => {
+            const blobElement = blob as HTMLElement; // Cast to HTMLElement
+            let delay: number = Math.random() * 7
+            let duration: number = Math.random() * 8 + 15;
+            blobElement.style.animationDelay = delay + 's';
+            blobElement.style.animationDuration = duration + 's';
+
+            blobElement.addEventListener('animationiteration', event => {
+                const animationDelay = parseFloat(getComputedStyle(blobElement).animationDelay) || 0;
+                const animationDuration = parseFloat(getComputedStyle(blobElement).animationDuration) || 0;
+                //console.log(event.animationName)
+                if (event.animationName === 'floating2' || event.animationName === 'floating1') {
+                    blobElement.style.left = Math.random() * 100 + '%';
+                    blobElement.style.transform = 'scale(' + (Math.random() * 1.5 + 0.2) + ')';
+                }
+            });
+
+        });
+
+        // Load the KUTE library dynamically
+        const morphScript = document.createElement('script');
+        morphScript.src = 'https://cdn.jsdelivr.net/npm/kute.js@2.1.0/dist/kute.min.js';
+        morphScript.async = true;
+        morphScript.onload = () => {
+            console.log('HOW MANY BLOBS  : ' + blobs.length)
+
+            for (let i = 1; i <= (blobs.length * 2); ++i) {
                 let animationDuration = Math.random() * 2000 + 1500;
                 KUTE.fromTo(
                     '#blob' + i,
@@ -22,40 +46,17 @@ const LavaLamp: React.FC = () => {
                     {path: '#blob' + ++i},
                     {repeat: 999, duration: animationDuration, yoyo: true}
                 ).start();
+                console.log('brateee ' + i)
             }
         };
 
         // Add the script to the document
-        document.body.appendChild(script);
+        document.body.appendChild(morphScript);
 
-
-        const blobs = document.querySelectorAll('#blobs div');
-        console.log('HOW MANY BLOBS  : ' + blobs.length)
-
-        blobs.forEach(blob => {
-            const blobElement = blob as HTMLElement; // Cast to HTMLElement
-            let delay: number = Math.random() * 7
-            let duration: number = Math.random() * 8 + 8;
-            blobElement.style.animationDelay = delay + 's';
-            blobElement.style.animationDuration = duration + 's';
-
-            blobElement.addEventListener('animationiteration', event => {
-                const animationDelay = parseFloat(getComputedStyle(blobElement).animationDelay) || 0;
-                const animationDuration = parseFloat(getComputedStyle(blobElement).animationDuration) || 0;
-                    console.log(event.animationName)
-                if ( event.animationName === 'floating2' || event.animationName === 'floating1') {
-                    console.log('elapsed : ' + event.elapsedTime + ' duration: ' + animationDuration + ' delay :' + animationDelay)
-                    blobElement.style.left = Math.random() * 100 + '%';
-                    //blobElement.style.transform = 'scale(' + Math.random() * 0.6 + 0.4 + ')';
-
-                }
-            });
-
-        });
 
         // Cleanup the script element when the component unmounts
         return () => {
-            document.body.removeChild(script);
+            document.body.removeChild(morphScript);
         };
     }, []);
 
@@ -143,6 +144,50 @@ const LavaLamp: React.FC = () => {
                     </g>
                 </svg>
             </div>
+
+            <div className="morphing-blob-4">
+                <svg id="visual"
+                     viewBox="0 0 900 600"
+                     width="900"
+                     height="600"
+                     xmlns="http://www.w3.org/2000/svg"
+                     xmlnsXlink="http://www.w3.org/1999/xlink"
+                     version="1.1">
+                    <g transform="translate(455.29444455961647 356.40760265008265)">
+
+                        <path id="blob7"
+                              d="M173.7 -156.8C204.6 -99.8 194.9 -28.8 170.4 23C145.9 74.7 106.6 107.2 64.9 122.7C23.1 138.2 -21 136.7 -75.1 123.2C-129.2 109.7 -193.3 84.2 -202.5 45.7C-211.7 7.2 -166.1 -44.4 -123.2 -104.2C-80.3 -164 -40.1 -232 15.6 -244.5C71.4 -256.9 142.8 -213.9 173.7 -156.8"
+                              fill="#BB004B">
+                        </path>
+                    </g>
+                    <g transform="translate(410.90039939185255 307.0726734792533)"
+                       style={{visibility: 'hidden'}}>
+                        <path id="blob8"
+                              d="M185.5 -145.9C231.3 -90.5 253.1 -13.9 231 40.6C208.9 95 142.8 127.2 75.3 161.8C7.8 196.4 -61.2 233.4 -98.4 212.3C-135.5 191.3 -140.9 112.4 -149.9 42.8C-159 -26.8 -171.8 -87 -147.4 -137.5C-123 -188.1 -61.5 -229 4.2 -232.4C69.8 -235.7 139.7 -201.4 185.5 -145.9"
+                              fill="#BB004B">
+                        </path>
+                    </g>
+                </svg>
+            </div>
+
+            <div className="morphing-blob-5">
+                <svg viewBox="0 0 900 600" width="900" height="600" xmlns="http://www.w3.org/2000/svg"
+                     xmlnsXlink="http://www.w3.org/1999/xlink"
+                     version="1.1">
+                    <g transform="translate(452.1409863151091 311.25024819625366)">
+                        <path id="blob9"
+                            d="M135.3 -231.8C173.3 -212.4 200.5 -172 219.8 -129.8C239.2 -87.7 250.6 -43.8 251.6 0.6C252.6 45 243.2 90 219.5 124.5C195.7 159 157.6 183 118.6 191.3C79.7 199.7 39.8 192.3 -5.1 201.1C-50 209.9 -100 234.9 -132.8 223C-165.5 211 -181.1 162.3 -205.9 119C-230.7 75.7 -264.9 37.8 -253.8 6.4C-242.6 -25 -186.3 -50 -159.4 -89.8C-132.6 -129.7 -135.3 -184.4 -113.7 -213.2C-92 -242 -46 -245 1.3 -247.3C48.7 -249.6 97.3 -251.3 135.3 -231.8"
+                            fill="#BB004B"></path>
+                    </g>
+                    <g transform="translate(439.0843719833481 328.5726349141429)"
+                       style={{visibility: 'hidden'}}>
+                        <path id="blob10"
+                            d="M189.7 -163.4C223 -109.5 211.4 -31.9 191 38C170.6 107.9 141.2 170.2 97.1 185.1C52.9 200 -6.1 167.6 -52.4 135.1C-98.6 102.7 -132.2 70.3 -158.2 18.3C-184.2 -33.6 -202.8 -105 -175.1 -157.7C-147.5 -210.3 -73.8 -244.1 2.2 -245.9C78.2 -247.7 156.4 -217.4 189.7 -163.4"
+                            fill="#BB004B"></path>
+                    </g>
+                </svg>
+            </div>
+
 
         </div>
     );

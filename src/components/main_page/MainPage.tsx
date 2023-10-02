@@ -8,6 +8,7 @@ import ReactiveButton2 from "../reactive_buttons/ReactiveButton2";
 import ReactiveButton3 from "../reactive_buttons/ReactiveButton3";
 import ReactiveButton4 from "../reactive_buttons/ReactiveButton4";
 import BlobSVG from "./blob_animation/LavaLamp";
+import HeroSection from "./hero_section/HeroSection"
 import "./MainPage.css";
 
 interface MainPageProps {
@@ -40,9 +41,7 @@ const MainPage: React.FC<MainPageProps> = () => {
 
         <div>
             <header>
-                <div id="title">
-                    <h1>DROLJE</h1>
-                </div>
+                <HeroSection/>
             </header>
 
             <main>
