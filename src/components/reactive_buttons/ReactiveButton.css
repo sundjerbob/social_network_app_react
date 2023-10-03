@@ -4,22 +4,26 @@
 .menu-item {
     position: fixed;
     width: 8vw;
+    height: 3rem;
     display: flex;
     align-items: center;
     background: linear-gradient(to bottom, #333  , #0005); /* Gradient background */
     border-radius: 20px; /* Rounded corners */
     padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-after-overflow: wrap;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease-out, left 0.3s ease-out, width 0.3s ease-out, top 0.3s ease; /* Add transitions for background color, left position, and width */
     z-index: 999;
     justify-content: center;
     background-clip:unset;
 
-    top: 5vh;
+    top: 4vh;
 }
 
 .menu-item.scrolled {
-    width:  18vw;
+    width:  17vw;
     left: 5vw;
 }
 
@@ -33,9 +37,12 @@
 
 /* Style the menu icon */
 .menu-icon {
-    width: 24px;
-    height: 24px;
+    position: absolute;
+    left: 4px;
+    width: 48px;
+    height: 48px;
     margin-right: 10px;
+
 }
 
 /* Style the menu text */

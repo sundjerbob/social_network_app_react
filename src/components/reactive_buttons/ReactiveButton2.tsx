@@ -11,7 +11,7 @@ interface ReactiveButton2Props {
 
 const ReactiveButton2: React.FC<ReactiveButton2Props> = ({ icon, text, isScrolled }) => {
     // Determine the class based on the scroll state
-    const menuItemClass = isScrolled? ' scrolled ' : '';
+    const menuItemClass = isScrolled ? ' scrolled ' : '';
 
     return (
         <div className={menuItemClass + 'menu-item item2'}>

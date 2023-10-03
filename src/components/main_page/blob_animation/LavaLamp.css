@@ -2,21 +2,46 @@
 
 .morphing-blob-1 {
     position: fixed;
-    top: -40vh; /* Start above the visible screen */
-    left: 50%; /* Adjust as needed */
-    transform: translateX(-50%); /* Center horizontally */
-    z-index: -2;
-    animation: floating1 infinite linear alternate;
+    top: 35vh; /* Start above the visible screen */
+    left: 17vw; /* Adjust as needed */
+    z-index: 0;
+    animation: hero-blob-float infinite ease-in-out alternate 5s;
 }
+
+@keyframes hero-blob-float {
+    0% {
+        transform: scale(250%) rotate(+90deg);
+    }
+    25% {
+        transform-style: flat;
+    }
+
+    100% {
+        transform: scale(230%) rotate(+90deg);
+    }
+}
+
+#blob1 {
+    fill: url(#bg-gradient-1);
+    z-index: 0;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.4); /* Change shadow on hover */
+
+}
+
 
 .morphing-blob-2 {
     position: fixed;
     top: -40vh; /* Start above the visible screen */
     left: 88%;
     transform: translateX(-50%); /* Center horizontally */
-    z-index: -2;
-    animation: floating2 infinite linear alternate;
+    z-index: 0;
+    animation: floating-blobs infinite linear alternate;
 }
+
+/*#blob3 {
+    fill: url(#bg-gradient-2);
+}
+*/
 
 .morphing-blob-3 {
     position: fixed;
@@ -24,7 +49,8 @@
     left: 24%;
     transform: translateX(-50%); /* Center horizontally */
     z-index: -2;
-    animation: floating1 infinite linear alternate;
+    animation: floating-blobs infinite linear alternate;
+    filter: blur(1px);
 }
 
 .morphing-blob-4 {
@@ -33,60 +59,57 @@
     left: 24%;
     transform: translateX(-50%); /* Center horizontally */
     z-index: -2;
-    animation: floating1 infinite linear alternate;
+    animation: floating-blobs infinite linear alternate;
+    filter: blur(1px);
+
+
 }
+
 .morphing-blob-5 {
     position: fixed;
     top: -40vh; /* Start above the visible screen */
     left: 24%;
     transform: translateX(-50%); /* Center horizontally */
     z-index: -2;
-    animation: floating1 infinite linear alternate;
+    animation: floating-blobs infinite linear alternate;
+    filter: blur(1px);
+
 }
 
-@keyframes floating1 {
-    0% {
+
+@keyframes floating-blobs {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
     }
-    50% {
-        transform: translate(0, 200vh); /* End position below the screen */
 
-    }
-    100% {
-        transform: translate(0, -200vh); /* End position below the screen */
-
-    }
-}
-
-@keyframes floating2 {
-    0% {
-
+    25% {
+        transform: translateY(100vh) rotate(90deg);
     }
 
     50% {
-        transform: translate(0, 200vh); /* End position below the screen */
-
+        transform: translateY(200vh) rotate(180deg);
     }
-    100% {
-        transform: translate(0, -200vh); /* End position below the screen */
 
+    75% {
+        transform: translateY(300vh) rotate(270deg);
     }
 }
 
-#blob1, #blob3, #blob5 {
+
+#blob3, #blob5, #blob7, #blob9 {
     animation: color-change 2s infinite linear alternate;
-
 }
 
 @keyframes color-change {
     0% {
-        fill: #FA7268;
+        fill: url(#bg-gradient-3);
 
     }
     50% {
-        fill: #C62368;
+        fill: url(#bg-gradient-4);
     }
 
     100% {
-        fill: #FA7268;
+        fill: url(#bg-gradient-4);
     }
 }

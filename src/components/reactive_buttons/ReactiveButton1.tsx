@@ -14,8 +14,8 @@ const ReactiveButton1: React.FC<ReactiveButton1Props> = ({ icon, text, isScrolle
     const menuItemClass = isScrolled ? ' scrolled ' : '';
 
     return (
-        <div className={menuItemClass + 'menu-item item1'} >
-            <img src="src/assets/time-management.png" alt="Menu Icon" className="menu-icon" />
+        <div className={menuItemClass + ' menu-item item1'} >
+            <img src={icon} alt="Menu Icon" className="menu-icon" />
             <span className="menu-text">{text}</span>
         </div>
     );

@@ -18,9 +18,10 @@
     display: flex;
     background-size: cover;
     background-position: top;
-    background-image: url('../../assets/TOP_VAVES.svg');
-    animation: slide1 50s ease-in-out infinite  alternate;
+    background-image: url('../../assets/Test_top_2.svg');
+    animation: slide1 50s ease-in-out infinite alternate;
     z-index: -1;
+    /*filter: blur(1px);*/
 }
 
 
@@ -34,9 +35,10 @@
     display: flex;
     background-size: cover;
     background-position: bottom;
-    background-image: url('../../assets/BOTTOM_WAWES.svg');
-    animation: slide2 45s ease-in-out infinite  alternate;
+    background-image: url('../../assets/Test_bot_2.svg');
+    animation: slide2 45s ease-in-out infinite alternate;
     z-index: -1;
+    filter: blur(1px);
 
 }
 
@@ -44,21 +46,24 @@
 
 @keyframes slide1 {
     0%{
-        transform: translate(0%,0%);
+        transform: translateX(0);
     }
 
+
+
     100%{
-        transform: translate(200vw,0);
+        transform: translateX(140vw);
     }
+
 }
 
 @keyframes slide2 {
     0%{
-        transform: translate(0%,0%);
+        transform: translateX(0vw);
     }
 
     100%{
-        transform: translate(-200vw,0);
+        transform: translateX(-150vw);
     }
 }
 
