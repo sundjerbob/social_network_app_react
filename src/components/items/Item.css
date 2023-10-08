@@ -25,7 +25,7 @@
 }
 
 .rectangle-item img {
-        transition: transform 0.3s; /* Add a transition for smooth animation */
+    transition: transform 0.3s; /* Add a transition for smooth animation */
     /* Style for the image in the middle */
     max-height: 60%; /* Adjust image height as needed */
     border-radius: 10px 10px 0 0; /* Rounded top corners */

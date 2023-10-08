@@ -2,11 +2,11 @@
 
 /* default state */
 .item4 {
-    left: 38vw;
-
+    left: 41vw;
 }
+
 
 /* scrolled state */
 .item4.scrolled {
-    top: 20rem; /* Move to the middle of the screen vertically */
+    top: 12rem; /* Move to the middle of the screen vertically */
 }

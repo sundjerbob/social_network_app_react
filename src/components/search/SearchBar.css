@@ -4,7 +4,7 @@
 .search-bar {
     z-index: 999;
     position: fixed;
-    top: 4vh;
+    top: 7vh;
     left: 55vw;
     width: 35vw;
     display: flex;
@@ -13,14 +13,24 @@
     border-radius: 20px;
     padding: 12px 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: left 0.3s ease-out, width 0.3s ease-out; /* Add transitions for smooth animation */
+    transition: left 0.3s ease-out, width 0.3s ease-out,
+    opacity 0.5s, filter 0.5s, transform 0.5s;
+
+    opacity: 1;
+    filter: blur(0);
+    transform:translateX(0);
+}
+
+.search-bar.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
 }
 
 /* Add styles for the scrolled state */
 .search-bar.scrolled {
     left:  5vw; /* Adjust left position for the scrolled state */
     width: 17vw; /* Reduce width to half when scrolled */
-    z-index: 999;
 }
 
 /* Style the search input field */
@@ -45,3 +55,4 @@
     cursor: pointer;
     position: relative; /* Add relative positioning for pseudo-element */
 }
+

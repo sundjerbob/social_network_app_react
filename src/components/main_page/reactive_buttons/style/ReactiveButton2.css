@@ -2,10 +2,9 @@
 
 /* default state */
 .item2 {
-    left: 18vw;
+    left: 19vw;
 }
 
-/* scrolled state */
 .item2.scrolled {
-    top: 25rem;
+    top: 24rem;
 }

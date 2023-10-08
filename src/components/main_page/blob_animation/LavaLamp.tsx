@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import KUTE from 'kute.js';
-import './LavaLamp.css'
+import './style/LavaLamp.css'
 
 
 const LavaLamp: React.FC = () => {
@@ -18,9 +18,6 @@ const LavaLamp: React.FC = () => {
             blobElement.style.animationDuration = duration + 's';
 
             blobElement.addEventListener('animationiteration', event => {
-                const animationDelay = parseFloat(getComputedStyle(blobElement).animationDelay) || 0;
-                const animationDuration = parseFloat(getComputedStyle(blobElement).animationDuration) || 0;
-                //console.log(event.animationName)
                 if (event.animationName === 'floating-blobs') {
                     blobElement.style.left = Math.random() * 100 + '%';
                     blobElement.style.transform = 'scale(' + (Math.random() * 1.5 + 0.2) + ')';
@@ -34,7 +31,6 @@ const LavaLamp: React.FC = () => {
         morphScript.src = 'https://cdn.jsdelivr.net/npm/kute.js@2.1.0/dist/kute.min.js';
         morphScript.async = true;
         morphScript.onload = () => {
-            console.log('HOW MANY BLOBS  : ' + blobs.length)
 
             for (let i = 1; i <= (blobs.length * 2); ++i) {
                 let animationDuration = Math.random() * 2000 + 1500;
@@ -55,7 +51,7 @@ const LavaLamp: React.FC = () => {
         return () => {
             document.body.removeChild(morphScript);
         };
-    }, []);
+    }, [document.onload]);
 
     return (
         <div id="blobs">
@@ -73,9 +69,9 @@ const LavaLamp: React.FC = () => {
                     version="1.1">
 
                     <defs>
-                        <linearGradient id="bg-gradient-1" x1="0%" y1="20%" x2="100%" y2="%">
-                            <stop offset="0%" style={{stopColor: '#333', stopOpacity: 1}}/>
-                            <stop offset="100%" style={{stopColor: '#0005', stopOpacity: 1}}/>
+                        <linearGradient id="bg-gradient-1" x1="0%" y1="20%" x2="100%" y2="0%">
+                            <stop offset="0%" style={{stopColor: '#0004', stopOpacity: 1}}/>
+                            <stop offset="100%" style={{stopColor: '#333', stopOpacity: 1}}/>
                         </linearGradient>
                     </defs>
 
@@ -109,8 +105,8 @@ const LavaLamp: React.FC = () => {
                     version="1.1">
                     <defs>
                         <linearGradient id="bg-gradient-2" x1="0%" y1="0%" x2="0%" y2="100%">
-                            <stop offset="0%" style={{stopColor: '#333', stopOpacity: 1}}/>
-                            <stop offset="100%" style={{stopColor: '#0005', stopOpacity: 1}}/>
+                            <stop offset="0%" style={{stopColor: '#0002', stopOpacity: 1}}/>
+                            <stop offset="100%" style={{stopColor: '#333', stopOpacity: 1}}/>
                         </linearGradient>
                     </defs>
 

@@ -3,11 +3,15 @@
 /* default state */
 .item1 {
     left: 8vw;
-   /* background-color: #747bff;*/
-
 }
+
 
 /* scrolled state */
 .item1.scrolled {
-    top: 10rem;
+    top: 30rem;
 }
+
+
+
+
+

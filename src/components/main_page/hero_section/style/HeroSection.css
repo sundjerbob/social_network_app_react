@@ -1,23 +1,24 @@
 /* HeroSection.css */
 
-.hero-section {
-    position: fixed;
-    top: 3vh;
-    left: 25vw;
-    font-size: 100px ;
-    text-shadow:  #FA7268;
 
+.hero-section h2{
+    position: fixed;
+    top: 20vh;
+    left: 25vw;
+    font-size: 80px ;
+    text-shadow:  #FA7268;
     border-radius: 10px;
     width: 40vw;
     height: 20vh;
     letter-spacing: 0;
     line-height: 10rem; /* You can adjust the value as needed */
-
-    filter: blur(100x);
     text-align: left;
-    color: #f5f5f5;
+    color: #cccc;
     z-index: 999;
+filter: shadow(100px red.);
 }
 
-.hero-section h2 {
+.hero-section h2.effect  {
+    color: black;
+    filter: blur(4px);
 }

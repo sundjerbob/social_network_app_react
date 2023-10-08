@@ -2,7 +2,7 @@
 
 .morphing-blob-1 {
     position: fixed;
-    top: 35vh; /* Start above the visible screen */
+    top: 32vh; /* Start above the visible screen */
     left: 17vw; /* Adjust as needed */
     z-index: 0;
     animation: hero-blob-float infinite ease-in-out alternate 5s;
@@ -10,14 +10,20 @@
 
 @keyframes hero-blob-float {
     0% {
-        transform: scale(250%) rotate(+90deg);
-    }
-    25% {
-        transform-style: flat;
+        transform: scale(80%) rotate(+90deg);
     }
 
+    25% {
+        transform: scale(82%) rotate(-5deg);
+    }
+    50% {
+        transform: scale(83%) rotate(+6deg);
+    }
+    75% {
+        transform: scale(82%) rotate(-4deg);
+    }
     100% {
-        transform: scale(230%) rotate(+90deg);
+        transform: scale(80%) rotate(3deg);
     }
 }
 
@@ -34,7 +40,7 @@
     top: -40vh; /* Start above the visible screen */
     left: 88%;
     transform: translateX(-50%); /* Center horizontally */
-    z-index: 0;
+    z-index: -2;
     animation: floating-blobs infinite linear alternate;
 }
 
@@ -97,19 +103,7 @@
 
 
 #blob3, #blob5, #blob7, #blob9 {
-    animation: color-change 2s infinite linear alternate;
+    fill: url(#bg-gradient-4);
 }
 
-@keyframes color-change {
-    0% {
-        fill: url(#bg-gradient-3);
 
-    }
-    50% {
-        fill: url(#bg-gradient-4);
-    }
-
-    100% {
-        fill: url(#bg-gradient-4);
-    }
-}

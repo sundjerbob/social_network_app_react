@@ -3,32 +3,50 @@
 /* Style the menu item container */
 .menu-item {
     position: fixed;
+    top: 7vh;
     width: 8vw;
-    height: 3rem;
+    height: 2rem;
     display: flex;
     align-items: center;
-    background: linear-gradient(to bottom, #333  , #0005); /* Gradient background */
+    justify-content: center;
+    background: linear-gradient(to bottom, #333, #0005); /* Gradient background */
     border-radius: 20px; /* Rounded corners */
-    padding: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 20px;
     text-after-overflow: wrap;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease-out, left 0.3s ease-out, width 0.3s ease-out, top 0.3s ease; /* Add transitions for background color, left position, and width */
     z-index: 999;
-    justify-content: center;
-    background-clip:unset;
+    background-clip: unset;
 
-    top: 4vh;
+    transition: background-color 0.3s ease-out,
+    left 0.3s ease-out,
+    right ease-out 0.3s,
+    width 0.3s ease-out,
+    top 0.3s ease,
+
+    transform 1s ease,
+    opacity 1s ease,
+    filter 1s ease;
+
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
 }
 
+.menu-item.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+}
+
+
+
 .menu-item.scrolled {
-    width:  17vw;
+    width: 17vw;
     left: 5vw;
 }
 
-.menu-item:hover{
-    background: linear-gradient(to bottom, #333  , #007bff); /* Gradient background */
+.menu-item:hover {
+    background: linear-gradient(to bottom, #333, #007bff); /* Gradient background */
     cursor: pointer;
     transform: scale(1.05);
     transition: transform 0.2s ease-in-out;
@@ -52,8 +70,6 @@
 }
 
 
-
-/* Add any other styles you need */
 
 
 
