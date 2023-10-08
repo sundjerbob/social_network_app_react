@@ -9,7 +9,7 @@ import ReactiveButton3 from "./reactive_buttons/ReactiveButton3";
 import ReactiveButton4 from "./reactive_buttons/ReactiveButton4";
 import BlobSVG from "./blob_animation/LavaLamp";
 import HeroSection from "./hero_section/HeroSection"
-import "./MainPage.css";
+import "./style/MainPage.css";
 
 interface MainPageProps {
     // Define props here
@@ -18,6 +18,7 @@ interface MainPageProps {
 const MainPage: React.FC<MainPageProps> = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isRendered] =  useState(false);
+
     useEffect(() => {
         const handleScroll = () => {
             const scrollY = window.scrollY;
@@ -25,6 +26,8 @@ const MainPage: React.FC<MainPageProps> = () => {
 
 
             if (scrollY > scrollThreshold) {
+
+                (document.querySelector('.search-bar') as HTMLElement).style.transitionDelay = '0s';
 
                 document.querySelectorAll('.menu-item').forEach(
                     menuItem => {

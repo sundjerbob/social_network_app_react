@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import "./SearchBar.css";
+import "./style/SearchBar.css";
 
 interface SearchBarProps {
     isScrolled: boolean; // Prop to indicate scroll state

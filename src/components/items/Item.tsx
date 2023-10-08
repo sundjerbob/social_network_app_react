@@ -1,6 +1,6 @@
 // Item.tsx
 import React from 'react';
-import './Item.css'
+import './style/Item.css'
 interface ItemProps {
     label: string; // Prop for the label at the top
     imageSrc: string; // Prop for the image source
