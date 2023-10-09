@@ -94,7 +94,7 @@ const MainPage: React.FC<MainPageProps> = () => {
             </main>
 
             <footer>
-                <p> 2023 George Dragash LLC &copy;</p>
+                <p> 2023 MAJERS Limited LLC &copy;</p>
                 <p>Contact us: <a href="mailto:contact@example.com">example@gmail.com</a></p>
             </footer>
         </div>
