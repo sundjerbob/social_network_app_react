@@ -7,7 +7,7 @@
     position: fixed;
     z-index: -100;
     height: 100vh;
-    background: linear-gradient(to bottom, #242424  , #0005); /* Gradient background */
+    background: linear-gradient(to bottom, #110e0e, rgba(231, 0, 0, 0.33)); /* Gradient background */
 }
 
 #up {
@@ -24,7 +24,7 @@
     animation: slide1 50s ease-in-out infinite alternate;
     z-index: -1;
 
-    transition: all 0.5s linear;
+    transition: all 0.3s linear;
     filter: blur(1px);
     transform-style: preserve-3d;
     transform: translateY(0);
@@ -51,7 +51,7 @@
     animation: slide2 45s ease-in-out infinite alternate;
     z-index: -1;
 
-    transition: all 0.5s linear;
+    transition: all 0.3s linear;
     filter: blur(1px);
     opacity: 1;
     transform: translateY(0);

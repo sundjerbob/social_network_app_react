@@ -47,7 +47,7 @@ const MainPage: React.FC<MainPageProps> = () => {
 
         setTimeout(() => {
             setIsRendered(true);
-        }, 100);
+        }, 150);
 
 
         /*
@@ -86,6 +86,7 @@ const MainPage: React.FC<MainPageProps> = () => {
                 <div id="up" className={isRendered ? '' : ' hidden '}/>
                 <div id="down" className={isRendered ? '' : ' hidden '}/>
 
+                <LavaLamp/>
                 <ReactiveButton1 icon="src/assets/evaluating.png" text="Create a Marketing Page" isScrolled={isScrolled}/>
                 <ReactiveButton2 icon="src/assets/time-management.png" text="I Luksuz" isScrolled={isScrolled}/>
                 <ReactiveButton3 icon="src/assets/filter.png" text="STa ti treba" isScrolled={isScrolled}/>
@@ -94,7 +95,6 @@ const MainPage: React.FC<MainPageProps> = () => {
 
                 <ItemGrid isScrolled={isScrolled}/>
 
-                <LavaLamp/>
             </main>
 
             <footer>

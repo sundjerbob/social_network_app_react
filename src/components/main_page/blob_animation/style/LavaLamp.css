@@ -31,13 +31,12 @@
     fill: url(#bg-gradient-1);
     z-index: 0;
     box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.4); /* Change shadow on hover */
-
 }
 
 
 .morphing-blob-2 {
     position: fixed;
-    top: -40vh; /* Start above the visible screen */
+    top: -70vh; /* Start above the visible screen */
     left: 88%;
     transform: translateX(-50%); /* Center horizontally */
     z-index: -2;
@@ -51,7 +50,7 @@
 
 .morphing-blob-3 {
     position: fixed;
-    top: -40vh; /* Start above the visible screen */
+    top: -70vh; /* Start above the visible screen */
     left: 24%;
     transform: translateX(-50%); /* Center horizontally */
     z-index: -2;
@@ -61,7 +60,7 @@
 
 .morphing-blob-4 {
     position: fixed;
-    top: -40vh; /* Start above the visible screen */
+    top: -70vh; /* Start above the visible screen */
     left: 24%;
     transform: translateX(-50%); /* Center horizontally */
     z-index: -2;
@@ -73,7 +72,7 @@
 
 .morphing-blob-5 {
     position: fixed;
-    top: -40vh; /* Start above the visible screen */
+    top: -70vh; /* Start above the visible screen */
     left: 24%;
     transform: translateX(-50%); /* Center horizontally */
     z-index: -2;

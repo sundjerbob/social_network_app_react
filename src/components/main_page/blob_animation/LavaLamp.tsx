@@ -32,15 +32,17 @@ const LavaLamp: React.FC = () => {
         morphScript.async = true;
         morphScript.onload = () => {
 
-            for (let i = 1; i <= (blobs.length * 2); ++i) {
-                let animationDuration = Math.random() * 2000 + 1500;
-                KUTE.fromTo(
-                    '#blob' + i,
-                    {path: '#blob' + i},
-                    {path: '#blob' + ++i},
-                    {repeat: 999, duration: animationDuration, yoyo: true}
-                ).start();
-            }
+
+                for (let i = 1; i <= (blobs.length * 2); ++i) {
+                    let animationDuration = Math.random() * 2000 + 1500;
+                    KUTE.fromTo(
+                        '#blob' + i,
+                        {path: '#blob' + i},
+                        {path: '#blob' + ++i},
+                        {repeat: 999, duration: animationDuration, yoyo: true}
+                    ).start();
+                }
+
         };
 
         // Add the script to the document
