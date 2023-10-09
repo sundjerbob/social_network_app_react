@@ -24,7 +24,9 @@ const ReactiveButton3: React.FC<ReactiveButton3Props> = ({ icon, text, isScrolle
             if (element) {
                 if (!isRendered) {
                     element.style.transitionDelay = '0.6s';
-                    setIsRendered(true);
+                    setTimeout(() => {
+                        setIsRendered(true);
+                    }, 100);
                 }
 
             }

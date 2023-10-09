@@ -23,9 +23,19 @@
     background-image: url('../../../assets/Test_top_2.svg');
     animation: slide1 50s ease-in-out infinite alternate;
     z-index: -1;
-    /*filter: blur(1px);*/
+
+    transition: all 0.5s linear;
+    filter: blur(1px);
+    transform-style: preserve-3d;
+    transform: translateY(0);
+    opacity: 1;
 }
 
+#up.hidden {
+    opacity: 0;
+    filter: blur(7px);
+    top: -20vh;
+}
 
 #down {
 
@@ -40,8 +50,17 @@
     background-image: url('../../../assets/Test_bot_2.svg');
     animation: slide2 45s ease-in-out infinite alternate;
     z-index: -1;
-    filter: blur(1px);
 
+    transition: all 0.5s linear;
+    filter: blur(1px);
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#down.hidden {
+    opacity: 0;
+    filter: blur(7px);
+    top: +20vh;
 }
 
 
@@ -52,7 +71,7 @@
 
 
     100% {
-        transform: translateX(200vw);
+        transform: translateX(150vw);
     }
 
 }

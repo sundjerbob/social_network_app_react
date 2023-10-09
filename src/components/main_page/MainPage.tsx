@@ -7,8 +7,7 @@ import ReactiveButton1 from "./reactive_buttons/ReactiveButton1";
 import ReactiveButton2 from "./reactive_buttons/ReactiveButton2";
 import ReactiveButton3 from "./reactive_buttons/ReactiveButton3";
 import ReactiveButton4 from "./reactive_buttons/ReactiveButton4";
-import BlobSVG from "./blob_animation/LavaLamp";
-import HeroSection from "./hero_section/HeroSection"
+import LavaLamp from "./blob_animation/LavaLamp";
 import "./style/MainPage.css";
 
 interface MainPageProps {
@@ -16,14 +15,15 @@ interface MainPageProps {
 }
 
 const MainPage: React.FC<MainPageProps> = () => {
+
+    const [isRendered, setIsRendered] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
-    const [isRendered] =  useState(false);
 
     useEffect(() => {
+
         const handleScroll = () => {
             const scrollY = window.scrollY;
             const scrollThreshold = 150;
-
 
             if (scrollY > scrollThreshold) {
 
@@ -31,7 +31,7 @@ const MainPage: React.FC<MainPageProps> = () => {
 
                 document.querySelectorAll('.menu-item').forEach(
                     menuItem => {
-                        if(menuItem) {
+                        if (menuItem) {
                             (menuItem as HTMLElement).style.transitionDelay = '0s';
                         }
                     }
@@ -44,6 +44,11 @@ const MainPage: React.FC<MainPageProps> = () => {
             }
         };
         window.addEventListener("scroll", handleScroll);
+
+        setTimeout(() => {
+            setIsRendered(true);
+        }, 100);
+
 
         /*
         const intersectionObserver: IntersectionObserver = new IntersectionObserver(
@@ -74,15 +79,14 @@ const MainPage: React.FC<MainPageProps> = () => {
             <div className="background"></div>
 
             <header>
-                <HeroSection/>
             </header>
 
             <main>
 
-                <div id="up"/>
-                <div id="down"/>
+                <div id="up" className={isRendered ? '' : ' hidden '}/>
+                <div id="down" className={isRendered ? '' : ' hidden '}/>
 
-                <ReactiveButton1 icon="src/assets/evaluating.png" text="Create a Marketing Page" isScrolled={isScrolled} />
+                <ReactiveButton1 icon="src/assets/evaluating.png" text="Create a Marketing Page" isScrolled={isScrolled}/>
                 <ReactiveButton2 icon="src/assets/time-management.png" text="I Luksuz" isScrolled={isScrolled}/>
                 <ReactiveButton3 icon="src/assets/filter.png" text="STa ti treba" isScrolled={isScrolled}/>
                 <ReactiveButton4 icon="src/assets/timetable.png" text="Kaazi  " isScrolled={isScrolled}/>
@@ -90,7 +94,7 @@ const MainPage: React.FC<MainPageProps> = () => {
 
                 <ItemGrid isScrolled={isScrolled}/>
 
-                <BlobSVG/>
+                <LavaLamp/>
             </main>
 
             <footer>
