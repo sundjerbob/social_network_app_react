@@ -1,0 +1,65 @@
+/* LogoBlob.css */
+
+
+.logo-blob {
+    top: 20%;
+    left: 32%;
+    width: 25vw;
+    height: 20vh;
+    position: relative;
+
+}
+
+.logo-blob .name {
+    position: absolute;
+    font-size: 60px;
+    text-shadow: #FA7268;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    letter-spacing: 0;
+    line-height: 10rem; /* You can adjust the value as needed */
+    color: #cccc;
+    z-index: 999;
+    opacity: 0.99;
+    display: inline-block;
+
+}
+
+.morphing-blob-1 {
+    position: fixed;
+    top: 32vh; /* Start above the visible screen */
+    left: 17vw; /* Adjust as needed */
+    z-index: 0;
+
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2); /* Adjust the shadow values*/
+    animation: hero-blob-float infinite ease-in-out alternate 5s;
+}
+
+@keyframes hero-blob-float {
+    0% {
+        transform: scale(80%) rotate(0deg);
+    }
+
+    25% {
+        transform: scale(82%) rotate(-5deg);
+    }
+    50% {
+        transform: scale(83%) rotate(+6deg);
+    }
+    75% {
+        transform: scale(82%) rotate(-4deg);
+    }
+    100% {
+        transform: scale(80%) rotate(3deg);
+    }
+}
+
+#blob1 {
+    fill: url(#bg-gradient-1);
+    z-index: 0;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.4); /* Change shadow on hover */
+    align-content: center;
+    text-align-all: center;
+}

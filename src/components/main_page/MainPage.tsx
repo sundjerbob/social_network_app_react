@@ -18,6 +18,7 @@ const MainPage: React.FC<MainPageProps> = () => {
 
     const [isRendered, setIsRendered] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
+    const [isLavaLampOn, lavaLampOn] = useState(false);
 
     useEffect(() => {
 
@@ -46,8 +47,8 @@ const MainPage: React.FC<MainPageProps> = () => {
         window.addEventListener("scroll", handleScroll);
 
         setTimeout(() => {
-            setIsRendered(true);
-        }, 150);
+           setIsRendered(true);
+        }, 100);
 
 
         /*
@@ -67,11 +68,17 @@ const MainPage: React.FC<MainPageProps> = () => {
         });
         */
 
+
         return () => {
             window.removeEventListener("scroll", handleScroll);
             //intersectionObserver.disconnect();
         };
     }, []);
+
+    setTimeout(() => {
+        lavaLampOn(true);
+    }, 3000);
+
 
     return (
 
@@ -86,7 +93,7 @@ const MainPage: React.FC<MainPageProps> = () => {
                 <div id="up" className={isRendered ? '' : ' hidden '}/>
                 <div id="down" className={isRendered ? '' : ' hidden '}/>
 
-                <LavaLamp/>
+                {isLavaLampOn && <LavaLamp/>}
                 <ReactiveButton1 icon="src/assets/evaluating.png" text="Create a Marketing Page" isScrolled={isScrolled}/>
                 <ReactiveButton2 icon="src/assets/time-management.png" text="I Luksuz" isScrolled={isScrolled}/>
                 <ReactiveButton3 icon="src/assets/filter.png" text="STa ti treba" isScrolled={isScrolled}/>
@@ -104,5 +111,6 @@ const MainPage: React.FC<MainPageProps> = () => {
         </div>
     );
 };
+
 
 export default MainPage;

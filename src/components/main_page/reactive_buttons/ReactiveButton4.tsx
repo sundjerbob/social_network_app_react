@@ -13,7 +13,7 @@ interface ReactiveButton4Props {
 
 const ReactiveButton4: React.FC<ReactiveButton4Props> = ({icon, text, isScrolled}) => {
 
-    const [isRendered, setIsRendered] = useState(false);
+    const [isRendered, setRendered] = useState(false);
 
     useEffect(
         () => {
@@ -24,8 +24,8 @@ const ReactiveButton4: React.FC<ReactiveButton4Props> = ({icon, text, isScrolled
                 if (!isRendered) {
                     element.style.transitionDelay = '0.8s';
                     setTimeout(() => {
-                        setIsRendered(true);
-                    }, 100);
+                        setRendered(true);
+                    }, 50);
                 }
 
             }
