@@ -1,6 +1,8 @@
 /* LavaLamp.css */
 
-
+#blobs {
+    transition: opacity 0.5s;
+}
 
 .morphing-blob-2 {
     position: fixed;

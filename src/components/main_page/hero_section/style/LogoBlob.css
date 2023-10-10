@@ -7,7 +7,8 @@
     width: 25vw;
     height: 20vh;
     position: relative;
-
+    align-content: center;
+    text-align-all: center;
 }
 
 .logo-blob .name {
@@ -24,7 +25,8 @@
     z-index: 999;
     opacity: 0.99;
     display: inline-block;
-
+    top: 32vh;
+    left: 17vw;
 }
 
 .morphing-blob-1 {
@@ -32,14 +34,14 @@
     top: 32vh; /* Start above the visible screen */
     left: 17vw; /* Adjust as needed */
     z-index: 0;
-
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2); /* Adjust the shadow values*/
+    display: inline-block;
+    scale: 1.5;
     animation: hero-blob-float infinite ease-in-out alternate 5s;
 }
 
 @keyframes hero-blob-float {
     0% {
-        transform: scale(80%) rotate(0deg);
+        transform: scale(100%) rotate(0deg);
     }
 
     25% {
@@ -59,7 +61,4 @@
 #blob1 {
     fill: url(#bg-gradient-1);
     z-index: 0;
-    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.4); /* Change shadow on hover */
-    align-content: center;
-    text-align-all: center;
 }

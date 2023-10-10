@@ -14,7 +14,7 @@
     position: fixed;
     overflow-block: auto;
     top: 0;
-    left: -200vw;
+    left: -200%;
     width: 300%;
     height: 100%;
     display: flex;

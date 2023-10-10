@@ -77,7 +77,7 @@ const MainPage: React.FC<MainPageProps> = () => {
 
     setTimeout(() => {
         lavaLampOn(true);
-    }, 3000);
+    }, 500);
 
 
     return (
