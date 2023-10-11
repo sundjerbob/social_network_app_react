@@ -1,7 +1,6 @@
 import { useState } from 'react'
-import './components/main_page/MainPage'
 import './App.css'
-import MainPage from './components/main_page/MainPage';
+import MainPage from './pages/main_page/MainPage';
 
 function App() {
   const [count, setCount] = useState(0)

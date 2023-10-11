@@ -1,10 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import KUTE from 'kute.js';
 import './style/LavaLamp.css'
-import LogoBlob from "../hero_section/LogoBlob";
+import LogoBlob from "../hero_blob/LogoBlob";
 
 
 const LavaLamp: React.FC = () => {
+
     const blobs = document.querySelectorAll('#blobs .randomized');
 
     blobs.forEach(blob => {
@@ -23,77 +24,46 @@ const LavaLamp: React.FC = () => {
 
     });
 
+    // Load the KUTE library dynamically
+    const morphScript = document.createElement('script');
+    morphScript.src = 'https://cdn.jsdelivr.net/npm/kute.js@2.1.0/dist/kute.min.js';
+    morphScript.async = true;
+    morphScript.onload = () => {
+
+
+        //starting animation for LogoBlob sine I want to load morph script only here
+        KUTE.fromTo(
+            '#blob1',
+            {path: '#blob1'},
+            {path: '#blob2'},
+            {repeat: 999, duration: 5000, yoyo: true}
+        ).start();
+
+        for (let i = 3; i <= blobs.length; ++i) {
+            let morphDuration = Math.random() * 3000 + 1500;
+
+            KUTE.fromTo(
+                '#blob' + i,
+                {path: '#blob' + i},
+                {path: '#blob' + ++i},
+                {repeat: 999, duration: morphDuration, yoyo: true}
+            ).start();
+        }
+
+
+
+    };
+
     useEffect(() => {
 
-
-        // Load the KUTE library dynamically
-        const morphScript = document.createElement('script');
-        morphScript.src = 'https://cdn.jsdelivr.net/npm/kute.js@2.1.0/dist/kute.min.js';
-        morphScript.async = true;
-
-        morphScript.onload = () => {
-
-            KUTE.fromTo(
-                "#blob1",
-                {path: "#blob1"},
-                {path: "#blob2"},
-                {repeat: 999, duration: 5000, yoyo: true,}
-            ).start();
-
-
-            let morphDuration = Math.random() * 2000 + 1500;
-            KUTE.fromTo(
-                '#blob3',
-                {path: '#blob3'},
-                {path: '#blob4'},
-                {repeat: 999, duration: morphDuration, yoyo: true}
-            ).start();
-
-            morphDuration = Math.random() * 2000 + 1500;
-            KUTE.fromTo(
-                '#blob3',
-                {path: '#blob3'},
-                {path: '#blob4'},
-                {repeat: 999, duration: morphDuration, yoyo: true}
-            ).start();
-
-            morphDuration = Math.random() * 2000 + 1500;
-
-            KUTE.fromTo(
-                '#blob5',
-                {path: '#blob5'},
-                {path: '#blob6'},
-                {repeat: 999, duration: morphDuration, yoyo: true}
-            ).start();
-
-            morphDuration = Math.random() * 2000 + 1500;
-            KUTE.fromTo(
-                '#blob7',
-                {path: '#blob7'},
-                {path: '#blob8'},
-                {repeat: 999, duration: morphDuration, yoyo: true}
-            ).start();
-
-            morphDuration = Math.random() * 2000 + 1500;
-            KUTE.fromTo(
-                '#blob9',
-                {path: '#blob9'},
-                {path: '#blob10'},
-                {repeat: 999, duration: morphDuration, yoyo: true}
-            ).start();
-
-        };
         document.body.appendChild(morphScript);
-
 
 
         // Cleanup the script element when the component unmounts
         return () => {
             document.body.removeChild(morphScript);
         };
-    }, [document.onload]);
-
-
+    }, []);
 
 
     return (
@@ -198,7 +168,7 @@ const LavaLamp: React.FC = () => {
                         </defs>
 
                         <g transform="translate(389.41463576994175 317.09740250868055)">
-                            <path id="blob5"
+                            <path id="blob5 "
                                   d="M122.6 -220.3C151.9 -172 163.7 -126.1 186.1 -83.2C208.4 -40.3 241.3 -0.4 259.3 53.8C277.3 108.1 280.3 176.9 249.8 221.9C219.3 267 155.1 288.5 98.8 278.6C42.4 268.7 -6.1 227.4 -43.1 194.6C-80 161.9 -105.4 137.6 -119.5 109.9C-133.6 82.2 -136.4 51.1 -141.4 20C-146.5 -11.2 -153.7 -42.3 -151.1 -77.7C-148.4 -113 -135.8 -152.4 -109 -201.8C-82.2 -251.2 -41.1 -310.6 2.8 -314.9C46.7 -319.3 93.4 -268.6 122.6 -220.3"
                                   fill="#BB004B"></path>
                         </g>

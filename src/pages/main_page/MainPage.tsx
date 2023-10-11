@@ -1,13 +1,13 @@
 // MainPage.tsx
 
 import React, {useEffect, useState} from "react";
-import ItemGrid from "../grid_layout/ItemGrid";
-import SearchBar from "../search/SearchBar";
+import ItemGrid from "../../components/grid_layout/ItemGrid";
+import SearchBar from "./search/SearchBar";
 import ReactiveButton1 from "./reactive_buttons/ReactiveButton1";
 import ReactiveButton2 from "./reactive_buttons/ReactiveButton2";
 import ReactiveButton3 from "./reactive_buttons/ReactiveButton3";
 import ReactiveButton4 from "./reactive_buttons/ReactiveButton4";
-import LavaLamp from "./blob_animation/LavaLamp";
+import LavaLamp from "./lava_lamp/LavaLamp";
 import "./style/MainPage.css";
 
 interface MainPageProps {
@@ -77,7 +77,7 @@ const MainPage: React.FC<MainPageProps> = () => {
 
     setTimeout(() => {
         lavaLampOn(true);
-    }, 500);
+    }, 100);
 
 
     return (
