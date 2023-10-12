@@ -1,15 +1,7 @@
 /* LogoBlob.css */
 
 
-.logo-blob {
-    top: 20%;
-    left: 32%;
-    width: 25vw;
-    height: 20vh;
-    position: relative;
-    align-content: center;
-    text-align-all: center;
-}
+
 
 .logo-blob .name {
     position: absolute;
@@ -29,36 +21,7 @@
     left: 17vw;
 }
 
-.morphing-blob-1 {
-    position: fixed;
-    top: 32vh; /* Start above the visible screen */
-    left: 17vw; /* Adjust as needed */
-    z-index: 0;
-    display: inline-block;
-    scale: 1.5;
-    animation: hero-blob-float infinite ease-in-out alternate 5s;
-}
 
-@keyframes hero-blob-float {
-    0% {
-        transform: scale(100%) rotate(0deg);
-    }
 
-    25% {
-        transform: scale(82%) rotate(-5deg);
-    }
-    50% {
-        transform: scale(83%) rotate(+6deg);
-    }
-    75% {
-        transform: scale(82%) rotate(-4deg);
-    }
-    100% {
-        transform: scale(80%) rotate(3deg);
-    }
-}
 
-#blob1 {
-    fill: url(#bg-gradient-1);
-    z-index: 0;
-}
+

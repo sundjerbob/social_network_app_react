@@ -1,67 +1,57 @@
 /* LavaLamp.css */
 
-#blobs {
-    transition: opacity 0.5s;
-}
-
-.morphing-blob-2 {
+.morphing-blob {
     position: fixed;
-    top: -70vh; /* Start above the visible screen */
-    left: 88%;
-    transform: translateX(-50%); /* Center horizontally */
-    z-index: -2;
-    animation: floating-blobs infinite linear alternate;
+    top: 32vh; /* Start above the visible screen */
+    left: 17vw; /* Adjust as needed */
+    z-index: 0;
+    transition: all 4s ease-in-out;
 }
 
-/*#blob3 {
-    fill: url(#bg-gradient-2);
+#blob1-path1 {
+    fill: url(#bg-gradient-1);
+    z-index: 0;
 }
-*/
 
-.morphing-blob-3 {
+@keyframes hero-blob-float {
+    0% {
+        transform: scale(100%) rotate(0deg);
+    }
+    25% {
+        transform: scale(82%) rotate(-5deg);
+    }
+    50% {
+        transform: scale(83%) rotate(+6deg);
+    }
+    75% {
+        transform: scale(82%) rotate(-4deg);
+    }
+    100% {
+        transform: scale(80%) rotate(3deg);
+    }
+}
+
+
+.morphing-blob.randomized {
     position: fixed;
-    top: -70vh; /* Start above the visible screen */
+    top: -100vh; /* Start above the visible screen */
     left: 24%;
     transform: translateX(-50%); /* Center horizontally */
     z-index: -2;
-    animation: floating-blobs infinite linear alternate;
-    filter: blur(1px);
-}
-
-.morphing-blob-4 {
-    position: fixed;
-    top: -70vh; /* Start above the visible screen */
-    left: 24%;
-    transform: translateX(-50%); /* Center horizontally */
-    z-index: -2;
-    animation: floating-blobs infinite linear alternate;
-    filter: blur(1px);
-
-
-}
-
-.morphing-blob-5 {
-    position: fixed;
-    top: -70vh; /* Start above the visible screen */
-    left: 24%;
-    transform: translateX(-50%); /* Center horizontally */
-    z-index: -2;
-    animation: floating-blobs infinite linear alternate;
-    filter: blur(1px);
-
+    animation: blob-float infinite linear alternate;
 }
 
 
-@keyframes floating-blobs {
+@keyframes blob-float {
     0%, 100% {
         transform: translateY(0) rotate(0deg);
     }
 
-    25% {
+    45% {
         transform: translateY(100vh) rotate(90deg);
     }
 
-    50% {
+    60% {
         transform: translateY(200vh) rotate(180deg);
     }
 
@@ -71,7 +61,7 @@
 }
 
 
-#blob3, #blob5, #blob7, #blob9 {
+#blob2-path1, #blob3-path1, #blob4-path1, #blob5-path1 {
     fill: url(#bg-gradient-4);
 }
 

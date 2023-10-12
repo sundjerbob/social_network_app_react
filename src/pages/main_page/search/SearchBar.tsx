@@ -21,7 +21,7 @@ const SearchBar: React.FC<SearchBarProps> = ({isScrolled}) => {
                         element.style.transitionDelay = '1s';
                         setTimeout(() => {
                             setIsRendered(true);
-                        }, 10);
+                        }, 200);
                     }
                     if (isScrolled && isRendered && getComputedStyle(element).transitionDelay !== '0s') {
                         element.style.transitionDelay = '0s';

@@ -22,7 +22,7 @@ const MainPage: React.FC<MainPageProps> = () => {
 
     useEffect(() => {
 
-        const handleScroll = () => {
+        const handleScroll = async () => {
             const scrollY = window.scrollY;
             const scrollThreshold = 150;
 
@@ -47,8 +47,9 @@ const MainPage: React.FC<MainPageProps> = () => {
         window.addEventListener("scroll", handleScroll);
 
         setTimeout(() => {
-           setIsRendered(true);
-        }, 100);
+
+            setIsRendered(true);
+        }, 150);
 
 
         /*
@@ -73,11 +74,11 @@ const MainPage: React.FC<MainPageProps> = () => {
             window.removeEventListener("scroll", handleScroll);
             //intersectionObserver.disconnect();
         };
-    }, []);
+    }, [document.onload]);
 
     setTimeout(() => {
         lavaLampOn(true);
-    }, 100);
+    }, 1750);
 
 
     return (

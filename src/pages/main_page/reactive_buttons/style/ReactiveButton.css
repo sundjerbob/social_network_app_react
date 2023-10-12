@@ -45,6 +45,7 @@
 }
 
 .menu-item:hover {
+    transition-delay: 0s;
     background: linear-gradient(to bottom, #333, #007bff); /* Gradient background */
     cursor: pointer;
     transform: scale(1.05);

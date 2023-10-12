@@ -9,7 +9,11 @@ const LogoBlob: React.FC = () => {
         <div className="logo-blob">
 
             <div className="name">
-                <h1>Bloop</h1>
+                <div className="b">B</div>
+                <div className="l">l</div>
+                <div className="o">o</div>
+                <div className="o">o</div>
+                <div className="p">p</div>
             </div>
 
 
