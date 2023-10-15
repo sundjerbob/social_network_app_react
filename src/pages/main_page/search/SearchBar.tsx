@@ -7,42 +7,34 @@ interface SearchBarProps {
 
 const SearchBar: React.FC<SearchBarProps> = ({isScrolled}) => {
 
-    {
+        {
 
-        const [isRendered, setIsRendered] = useState(false);
+            const [isRendered, setIsRendered] = useState(false);
 
-        useEffect(
-            () => {
+            useEffect(
+                () => {
 
-                const element = document.querySelector('.search-bar') as HTMLElement;
-
-                if (element) {
                     if (!isRendered) {
-                        element.style.transitionDelay = '1s';
                         setTimeout(() => {
                             setIsRendered(true);
                         }, 200);
                     }
-                    if (isScrolled && isRendered && getComputedStyle(element).transitionDelay !== '0s') {
-                        element.style.transitionDelay = '0s';
-                    }
-                }
+                }, [isScrolled]
+            );
 
-            }, [isScrolled]
-        );
-
-        const renderedStateClass = isRendered ? '' : ' hidden ';
+            const renderedStateClass = isRendered ? '' : ' hidden ';
 
 
-        return (
-            <div className={renderedStateClass + `search-bar ' ${isScrolled ? 'scrolled' : ''}`}>
-                <input type="text" placeholder="Search..."/>
-                <button type="submit" className="search-button">
-                    Search
-                </button>
-            </div>
-        );
+            return (
+                <div className={renderedStateClass + `search-bar ' ${isScrolled ? 'scrolled' : ''}`}>
+                    <input type="text" placeholder="Search..."/>
+                    <button type="submit" className="search-button">
+                        Search
+                    </button>
+                </div>
+            );
+        }
     }
-};
+;
 
 export default SearchBar;

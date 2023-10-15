@@ -18,15 +18,12 @@ const ReactiveButton2: React.FC<ReactiveButton2Props> = ({icon, text, isScrolled
     useEffect(
         () => {
 
-            const element = document.querySelector('.item2') as HTMLElement;
 
-            if (element) {
-                if (!isRendered) {
-                    element.style.transitionDelay = '0.4s';
-                    setTimeout(() => {
-                        setRendered(true);
-                    }, 200);
-                }
+            if (!isRendered) {
+                setTimeout(() => {
+                    setRendered(true);
+                }, 200);
+
 
             }
 

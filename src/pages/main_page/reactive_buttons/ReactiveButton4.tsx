@@ -18,15 +18,12 @@ const ReactiveButton4: React.FC<ReactiveButton4Props> = ({icon, text, isScrolled
     useEffect(
         () => {
 
-            const element = document.querySelector('.item4') as HTMLElement;
 
-            if (element) {
-                if (!isRendered) {
-                    element.style.transitionDelay = '0.8s';
-                    setTimeout(() => {
-                        setRendered(true);
-                    }, 200);
-                }
+            if (!isRendered) {
+                setTimeout(() => {
+                    setRendered(true);
+                }, 200);
+
 
             }
 

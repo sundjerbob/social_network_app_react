@@ -11,22 +11,19 @@ interface ReactiveButton3Props {
     isScrolled: boolean; // Prop to indicate scroll state
 }
 
-const ReactiveButton3: React.FC<ReactiveButton3Props> = ({ icon, text, isScrolled }) => {
+const ReactiveButton3: React.FC<ReactiveButton3Props> = ({icon, text, isScrolled}) => {
 
     const [isRendered, setRendered] = useState(false);
 
     useEffect(
         () => {
 
-            const element = document.querySelector('.item3') as HTMLElement;
 
-            if (element) {
-                if (!isRendered) {
-                    element.style.transitionDelay = '0.6s';
-                    setTimeout(() => {
-                        setRendered(true);
-                    }, 200);
-                }
+            if (!isRendered) {
+                setTimeout(() => {
+                    setRendered(true);
+                }, 200);
+
 
             }
 

@@ -28,15 +28,6 @@ const MainPage: React.FC<MainPageProps> = () => {
 
             if (scrollY > scrollThreshold) {
 
-                (document.querySelector('.search-bar') as HTMLElement).style.transitionDelay = '0s';
-
-                document.querySelectorAll('.menu-item').forEach(
-                    menuItem => {
-                        if (menuItem) {
-                            (menuItem as HTMLElement).style.transitionDelay = '0s';
-                        }
-                    }
-                );
 
                 setIsScrolled(true);
 

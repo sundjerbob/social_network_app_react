@@ -3,6 +3,13 @@
 /* default state */
 .item4 {
     left: 41vw;
+    transition: left 0.3s ease-out 0s,
+    right ease-out 0.3s 0s,
+    width 0.3s ease-out 0s,
+    top 0.3s ease-out 0s,
+    transform 1s ease-out 0.8s,
+    opacity 1s ease-out 0.8s,
+    filter 1s ease-out 0.8s;
 }
 
 

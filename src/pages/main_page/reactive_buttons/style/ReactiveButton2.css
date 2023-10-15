@@ -3,6 +3,15 @@
 /* default state */
 .item2 {
     left: 19vw;
+    transition:
+            left 0.3s ease-out 0s,
+            right ease-out 0.3s 0s,
+            width 0.3s ease-out 0s,
+            top 0.3s ease-out 0s,
+
+            transform 1s ease-out 0.4s,
+            opacity 1s ease-out 0.4s,
+            filter 1s ease-out 0.4s;
 }
 
 .item2.scrolled {

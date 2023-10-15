@@ -6,9 +6,8 @@ import {Simulate} from "react-dom/test-utils";
 import error = Simulate.error;
 
 
-const LavaLamp: React.FC = () => {
-
-
+const LavaLamp: React.FC =
+    () => {
     // Load the KUTE library dynamically
     const morphScript = document.createElement('script');
     morphScript.src = 'https://cdn.jsdelivr.net/npm/kute.js@2.1.0/dist/kute.min.js';
